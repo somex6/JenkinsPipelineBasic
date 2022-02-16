@@ -16,6 +16,12 @@ pipeline {
           }
         }
 
+        stage('Test Log') {
+          steps {
+            writeFile(file: 'LogTestFile', text: 'This is an automation')
+          }
+        }
+
       }
     }
 
